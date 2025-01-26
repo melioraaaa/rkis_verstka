@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --color-main: #1D2F30;
+    }
+
+    .title {
+      font-family: "Cormorant", serif;
+    }
+
+    .container {
+      max-width: 1110px;
+      margin: 0 auto;
+    }
+
+    .header-p {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    .hero {
+      padding-top: 115px;
+      padding-bottom: 115px;
+    }
+
+    .card__border {
+      border: 1px #0B1919 solid;
+    }
+
+    .image {
+      height: 493px;
+    }
+
+    .btn__primary{
+      color:#0B1919;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      line-height: 150%;
+      background-color: #BAE249;
+      
+    }
+    .btn__primary:hover{
+      background-color: #BAE249;
+    }
+    .btn__primary:checked{
+      background-color: #688B05;
+    }
+    .btn__secondary{
+      border: 1px #BAE249 solid;
+      color:#BAE249;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      line-height: 150%;
+    }
+    .input{
+      width: 350px; 
+      height: 45px; 
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        max-width: 500px;
+      }
+    }
+ 
+   
+  </style>
+</head>
+  <body style="background-color: var(--color-main); color:#899D9D; font-family: 'Open Sans', serif;">
+
+  <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between header-p container mx-auto md:container sm:mx-auto ">
+        <div class="  ">
+          <a href="#" class="">
+            <img src="images/logo.svg" class="" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- бургер меню /доработать-->
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-16">
+          <a href="#" class="text-base text-white">Каталог</a>
+          <a href="#" class="text-base text-white">Галерея</a>
+          <a href="#" class="text-base text-white">О лаборатории</a>
+          <a href="#" class="text-base text-white">Контакты</a>
+        </div>
+        <div class="flex gap-16">
+          <a href="images/search.svg"><img src="images/search.svg" alt="поиск"></a>
+          <a href="images/log-in.svg"><img src="images/log-in.svg" alt="логин"></a>
+        </div>
+        
+      </nav>
+    </header>
+
+
+<!-- хиро -->
+
+  <div class="w-full bg-center bg-cover " style="background-image: url('images/hero.jpg');">
+    <div class="container flex flex-col items-start hero m-auto">
+            <h2 class="title pb-4 text-6xl font-bold text-white" style="max-width: 700px;">Крупнейшая коллекция природных артефактов</h2>
+            <p class="pb-6 text-white text-base "  style="max-width: 700px;">
+              Являясь всего лишь частью общей картины, интерактивные прототипы, <br> которые представляют собой яркий пример европейского типа политической <br> и социальной культуры.
+            </p>
+            <a href="" class="font-bold text-base flex" style="color: #BAE249;">Исследовать<img class="mx-2" src="images/Arrow 1.svg" alt=""></a>
+          
+    </div>
+  </div>
+
+  <!-- карточки -->
+
+  <section class="pt-16 flex container mx-auto md:container md:mx-12 sm:container sm:mx-12 ">
+    <div class="flex flex-col md:flex-row justify-between gap-6 wrap">
+
+      <div class="card__border">
+        <img class="w-full h-auto object-cover" src="images/1card.jpg" alt="Card Image"/>
+        <div class="m-4 mb-6">
+          <h5 class="title text-2xl font-bold text-white mb-4">Fig. 1 (plant)</h5>
+          <p class=" font-base mb-8" style=" color:#899D9D;">
+            Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира своевременно верифицированы.
+          </p>
+          <a href="" class="btn__secondary ">
+            Исследовать 
+          </a>
+        </div>
+      </div>
+  
+      <div class="card__border">
+        <img class="w-full h-auto object-cover" src="images/1card.jpg" alt="Card Image"/>
+        <div class="p-4 pb-6">
+          <h5 class="title text-2xl font-bold text-white mb-4">Fig. 1 (plant)</h5>
+          <p class=" font-base mb-8" style=" color:#899D9D;">
+            Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира своевременно верифицированы.
+          </p>
+          <a href="" class="btn__secondary">
+            Исследовать 
+          </a>
+        </div>
+      </div>
+
+      <div class="card__border">
+        <img class="w-full h-auto object-cover" src="images/1card.jpg" alt="Card Image"/>
+        <div class="p-4 pb-6">
+          <h5 class="title text-2xl font-bold text-white mb-4">Fig. 1 (plant)</h5>
+          <p class=" font-base mb-8" style=" color:#899D9D;">
+            Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира своевременно верифицированы.
+          </p>
+          <a href="" class="btn__secondary">
+            Исследовать 
+          </a>
+        </div>
+      </div>
+
+      <div class="card__border">
+        <img class="w-full h-auto object-cover" src="images/1card.jpg" alt="Card Image"/>
+        <div class="p-4 pb-6">
+          <h5 class="title text-2xl font-bold text-white mb-4">Fig. 1 (plant)</h5>
+          <p class=" font-base mb-8" style=" color:#899D9D;">
+            Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира своевременно верифицированы.
+          </p>
+          <a href="" class="btn__secondary">
+            Исследовать 
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- новые артефакты -->
+  <section class="pt-16 flex flex-col container mx-auto md:container">
+    <h3 class="title pb-4 text-5xl font-bold italic text-white ">Помочь проекту</h3>
+
+    <div class="flex w-full gap-6 wrap" >
+      <div class="lg:w-3/4 md:w-3/4 sm:w-1 object-cover image" style="background-image: url('images/card_5.jpg');"></div>
+
+      <div class="flex flex-col lg:w-1/4 md:w-1/4 sm:w-1 p-4 pb-6 justify-between" style="background-color: #BAE249; color: #1D2F30;">
+        <div class="pb-1">
+          <h3 class="text-2xl title font-bold pb-4">Kurische Nehrung 24</h3>
+          <p class="pb-6" style="color: #506829;">Вот вам яркий пример современных тенденций - начало повседневной работы по формированию позиции выявляет срочную потребность методов управления процессами.</p>
+          <p style="color: #506829;">Есть над чем задуматься: представители современных социальных резервов своевременно верифицированы.</p>
+
+        </div>
+          
+      
+          <a href="" class="font-bold text-base flex" style="color: #0B1919;">Читать далее<img class="mx-2" src="images/Arrow 2.svg" alt=""></a>
+      </div>
+    </div>   
+  </section>
+
+<!-- форма -->
+<div class="mt-16 w-full bg-center bg-cover " style="background-image: url('images/form.jpg');">
+  <div class="container flex flex-col items-start py-16 m-auto">
+    <h3 class="title pb-4 text-5xl font-bold italic text-white ">Помочь проекту</h3>
+    <p class="pb-6 text-white text-base" style="max-width:850px;">
+      Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения прогресса профессионального сообщества. Как принято считать, элементы политического процесса рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. 
+    </p>
+       
+    <input type="text" placeholder="Имя" class="input mb-6">
+    <input type="text" placeholder="Email" class="input mb-6">
+    <button href="" class="btn__primary" >Отправить</button>             
+  </div>
+</div>
+
+<footer class="inset-x-0 top-0" style="background-color: #0B1919;">
+  <div class="container flex gap-8 mx-auto justify-center items-center py-4">
+    <a href=""><img src="images/1.svg" alt=""></a>
+    <a href=""><img src="images/2.svg" alt=""></a>
+    <a href=""><img src="images/3.svg" alt=""></a>
+    <a href=""><img src="images/4.svg" alt=""></a>
+  </div>
+  <p class="text-white  flex mx-auto justify-center items-center" style="background-color: var(--color-main);">f&b ® 2020</p>
+
+</footer>
+
+
+
+  </body>
+</html>
